@@ -1,12 +1,12 @@
 PODS:
   - GitHubActionPodDemo (0.1.0)
-  - Nimble (7.3.4)
-  - Quick (1.2.0)
+  - Nimble (8.0.4)
+  - Quick (2.2.0)
 
 DEPENDENCIES:
   - GitHubActionPodDemo (from `../`)
-  - Nimble (~> 7.0)
-  - Quick (~> 1.2.0)
+  - Nimble
+  - Quick
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GitHubActionPodDemo: 496a046730a09617554cd3baff013461883c30e0
-  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  GitHubActionPodDemo: de042c511114e7610b3e7f525da8460587a652a0
+  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
 
-PODFILE CHECKSUM: 92eecf9537c1acf2278681e352fc42e46db04f9c
+PODFILE CHECKSUM: b9308f7d04f1472cfce94cc1a160a854647d2f63
 
 COCOAPODS: 1.7.5
