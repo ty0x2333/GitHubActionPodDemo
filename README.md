@@ -22,7 +22,7 @@ pod 'GitHubActionPodDemo'
 
 ## Author
 
-ty0x2333, luckytianyiyan@gmail.com
+ty0x2333, ty0x2333@gmail.com
 
 ## License
 
