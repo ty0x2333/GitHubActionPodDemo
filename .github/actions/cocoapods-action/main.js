@@ -44,7 +44,7 @@ if (!scheme) {
 }
 
 var useModernBuildSystem
-if (core.getInput('use_modern_build_system')) {
+if (core.getInput('use_modern_build_system') === true) {
     useModernBuildSystem = "YES"
 } else {
     useModernBuildSystem = "NO"
