@@ -8,8 +8,10 @@ jobs:
     runs-on: macOS-latest
     
     steps:
-    - uses: actions/checkout@v1
     - uses: actions/checkout@master
+    - name: Install Dependences
+      run: pod install
+      shell: bash
     - name: Lint podspec file
       uses: ./.github/actions/cocoapods-action
       with:
