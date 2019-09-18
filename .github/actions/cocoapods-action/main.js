@@ -56,13 +56,17 @@ if (core.getInput('test')) {
     shell.echo("\033[1m=== Test ===\033[0m")
     const buildCommand = 'set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace ' + workspace + ' -scheme ' + scheme + ' ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -UseModernBuildSystem=' + useModernBuildSystem + ' ' + additionXcodeBuildParams + ' | xcpretty --color'
     console.log(buildCommand)
-    shell.exec(buildCommand)
+    if (shell.exec(buildCommand).code != 0) {
+        core.setFailed('test fail')
+    }
 }
 
 if (core.getInput('lint')) {
     shell.echo("\033[1m=== Lint ===\033[0m")
     const lintCommand = 'pod lib lint'
     console.log(lintCommand)
-    shell.exec(lintCommand)
+    if (shell.exec(lintCommand) != 0) {
+        core.setFailed('lint fail')
+    }
 }
 

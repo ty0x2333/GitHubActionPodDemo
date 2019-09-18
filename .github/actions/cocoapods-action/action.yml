@@ -14,7 +14,7 @@ inputs:
     default: false
   additional_build_params:
     description: Additional xcodebuild params
-    default: false
+    default: ""
   test:
     description: Run test
     default: true
