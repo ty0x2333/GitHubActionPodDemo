@@ -15,7 +15,7 @@ jobs:
         pod repo update
         pod install
       shell: bash
-    - name: Lint podspec file
+    - name: Test and Lint
       uses: ./.github/actions/cocoapods-action
       with:
         additional_build_params: -destination 'platform=iOS Simulator,id=F6B65723-B90E-4C4D-9364-B627623066CC'
