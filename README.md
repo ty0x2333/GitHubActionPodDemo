@@ -1,6 +1,6 @@
 # GitHubActionPodDemo
 
-[https://github.com/ty0x2333/GitHubActionPodDemo/workflows/Test%20And%20Lint/badge.svg](https://github.com/ty0x2333/GitHubActionPodDemo/actions)
+[![Actions Status](https://github.com/ty0x2333/GitHubActionPodDemo/workflows/Test%20And%20Lint/badge.svg)](https://github.com/ty0x2333/GitHubActionPodDemo/actions)
 
 ## Author
 
