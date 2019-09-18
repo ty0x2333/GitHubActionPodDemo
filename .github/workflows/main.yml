@@ -12,6 +12,7 @@ jobs:
     - name: Install Dependences
       run: |
         cd Example
+        pod repo update
         pod install
       shell: bash
     - name: Lint podspec file
