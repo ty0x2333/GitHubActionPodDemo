@@ -18,6 +18,6 @@ jobs:
     - name: Lint podspec file
       uses: ./.github/actions/cocoapods-action
       with:
-        additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.3'
+        additional_build_params: -destination 'platform=iOS Simulator,name=iPhone X,OS=12.2'
         scheme: GitHubActionPodDemo-Example
         additional_lint_params: --private
