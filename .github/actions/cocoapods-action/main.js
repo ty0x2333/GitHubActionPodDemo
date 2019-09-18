@@ -50,9 +50,8 @@ if (core.getInput('use_modern_build_system')) {
     useModernBuildSystem = "NO"
 }
 
-var additionXcodeBuildParams = core.getInput('additional_build_params')
-
 if (core.getInput('test')) {
+    var additionXcodeBuildParams = core.getInput('additional_build_params')
     shell.echo("\033[1m=== Test ===\033[0m")
     const buildCommand = 'set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace ' + workspace + ' -scheme ' + scheme + ' ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -UseModernBuildSystem=' + useModernBuildSystem + ' ' + additionXcodeBuildParams + ' | xcpretty --color'
     console.log(buildCommand)
@@ -62,8 +61,9 @@ if (core.getInput('test')) {
 }
 
 if (core.getInput('lint')) {
+    var additionLintParams = core.getInput('additional_lint_params')
     shell.echo("\033[1m=== Lint ===\033[0m")
-    const lintCommand = 'pod lib lint'
+    const lintCommand = 'pod lib lint ' + additionLintParams
     console.log(lintCommand)
     if (shell.exec(lintCommand) != 0) {
         core.setFailed('lint fail')

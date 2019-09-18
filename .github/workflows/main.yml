@@ -12,3 +12,5 @@ jobs:
     - uses: actions/checkout@master
     - name: Lint podspec file
       uses: ./.github/actions/cocoapods-action
+      with:
+        additional_lint_params: --private
