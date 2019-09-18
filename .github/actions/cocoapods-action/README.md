@@ -1,10 +1,12 @@
-```yaml
+```yml
 on: push
 jobs:
-  lint:
+  test:
     runs-on: macOS-latest
     steps:
     - uses: actions/checkout@master
-    - name: Lint podspec file
-      uses: ./.github/actions/cocoapods-action
+    - uses: ./.github/actions/cocoapods-action
+      with:
+        workspace: Example/GitHubActionPodDemo.xcworkspace
+        scheme: GitHubActionPodDemo-Example
 ```
