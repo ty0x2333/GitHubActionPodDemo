@@ -10,7 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Install Dependences
-      run: pod install
+      run: |
+        cd Example
+        pod install
       shell: bash
     - name: Lint podspec file
       uses: ./.github/actions/cocoapods-action
