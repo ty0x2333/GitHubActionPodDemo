@@ -14,3 +14,4 @@ jobs:
       uses: ./.github/actions/cocoapods-action
       with:
         additional_lint_params: --private
+        scheme: GitHubActionPodDemo-Example
